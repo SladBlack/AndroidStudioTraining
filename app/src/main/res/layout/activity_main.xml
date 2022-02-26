@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTintMode="add"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/plain_text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:inputType="text"
+        tools:ignore="LabelFor,MissingConstraints"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/button_id"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4CAF50"
+        android:backgroundTint="#4CAF50"
+        android:backgroundTintMode="src_atop"
+        android:text="@string/add_value"
+        android:textColorHighlight="#4CAF50"
+        app:layout_constraintTop_toBottomOf="@+id/plain_text_input"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintTop_toBottomOf="@+id/button_id"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="16dp"
+        tools:listitem="@layout/recyclerview_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
